@@ -1,2 +1,5 @@
 .next
 node_modules
+sources
+scripts
+out

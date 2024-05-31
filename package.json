@@ -1,17 +1,18 @@
 {
-  "name": "nextra-docs-template",
+  "name": "thedataengineering",
   "version": "0.0.1",
-  "description": "Nextra docs template",
+  "description": "Data Engineering Interview Preparation made easy.",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
+    "build": "next build && next export",
+    "start": "next start",
+    "export": "output: export"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/shuding/nextra-docs-template.git"
   },
-  "author": "Shu Ding <g@shud.in>",
+  "author": "Aayush Sharma",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/shuding/nextra-docs-template/issues"

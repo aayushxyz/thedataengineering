@@ -1,17 +1,43 @@
 import React from 'react'
 import { DocsThemeConfig } from 'nextra-theme-docs'
 
+
 const config: DocsThemeConfig = {
-  logo: <span>My Project</span>,
-  project: {
-    link: 'https://github.com/shuding/nextra-docs-template',
+  logo: (
+    <>
+      <img height="32px" width="32px" src="/logo.png" />
+      <span style={{ marginLeft: '.4em', fontWeight: 700, fontSize: '1.15em' }}>
+        The Data Engineering
+      </span>
+    </>
+  ),
+  useNextSeoProps() {
+    return {
+      titleTemplate: '%s – The Data Engineering'
+    }
   },
-  chat: {
-    link: 'https://discord.com',
+  editLink: {
+    component: null
   },
-  docsRepositoryBase: 'https://github.com/shuding/nextra-docs-template',
+  nextThemes: {
+    defaultTheme: 'light'
+  },
+  feedback: {
+    content: null
+  },
+  gitTimestamp: null,
+  toc: {
+    extraContent: (
+      <>
+        <h4> Liked our content? Please share your feeback.</h4>
+      </>
+    )
+  },
+  sidebar: {
+    defaultMenuCollapseLevel: 1
+  },
   footer: {
-    text: 'Nextra Docs Template',
+    text: 'The Data Engineering',
   },
 }
 
