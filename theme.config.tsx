@@ -1,6 +1,5 @@
 import React from 'react'
 import { DocsThemeConfig } from 'nextra-theme-docs'
-import { BackToTop } from './components/BackToTop'
 
 
 const config: DocsThemeConfig = {
@@ -30,7 +29,6 @@ const config: DocsThemeConfig = {
   toc: {
     extraContent: (
       <>
-        <BackToTop />
         <h4> Liked our content? Please share your feeback.</h4>
       </>
     )
