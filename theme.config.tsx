@@ -29,7 +29,7 @@ const config: DocsThemeConfig = {
   toc: {
     extraContent: (
       <>
-        <h4> Liked our content? Please share your feeback.</h4>
+        <h4> Liked our content? Please share your feeback. <a href="https://twitter.com/AayushXYZ">@AayushXYZ</a></h4>
       </>
     )
   },
@@ -37,8 +37,12 @@ const config: DocsThemeConfig = {
     defaultMenuCollapseLevel: 1
   },
   footer: {
-    text: 'The Data Engineering',
+    text: '©️ The Data Engineering 2024',
   },
+  banner: {
+    dismissible: true,
+    text: "This site is currently in Beta."
+  }
 }
 
 export default config

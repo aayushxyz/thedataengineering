@@ -1,36 +1,52 @@
----
-title: Home
----
+import { Callout, Steps, Card, Cards } from 'nextra-theme-docs'
+import HeroImage from '../components/HeroImage'
+import Link from 'next/link'
 
-# Ace your next Data Engineer interview
-
-Your one-stop destination for mastering data engineering concepts, tools, and best practices.
-
-## Get Started
-
-[Get Started](/)
-
-## Comprehensive Guides
-
-Explore in-depth tutorials, guides, and notes on essential data engineering topics.
-
-## Interview Preparation
-
-Prepare for your data engineering interviews with our curated questions and case studies.
-
-## Latest Tools and Frameworks
-
-Stay updated with the latest tools, frameworks, and best practices in data engineering.
-
-## Community Insights
-
-Join our community to share insights, ask questions, and network with fellow data engineers.
-
-
-import { Card, Cards } from 'nextra-theme-docs'
- 
-<Cards>
-  <Card  title="Callout" href="/docs/guide/built-ins/callout" />
-  <Card  title="Tabs" href="/docs/guide/built-ins/tabs" />
-  <Card  title="Steps" href="/docs/guide/built-ins/steps" />
+<br/>
+<br/>
+<h1 style={{"textAlign": "center", "fontSize": 40, "fontWeight": "bold"}}>Ace your next "Data Engineer" interview</h1>
+<br/>
+<p style={{"textAlign": "center", "fontSize": 20, "fontWeight": "normal"}}>Complete end-to-end resources for mastering data engineering <br/>and prepare for your next Data Engineer interview.</p>
+<br/>
+<br/>
+<HeroImage />
+<br/>
+<Cards num={2}>
+  <Cards.Card arrow title="Start Preparation" href="/" />
+  <Cards.Card arrow title="Mock Interviews* (Coming Soon)" href="/" />
 </Cards>
+<br/>
+
+
+## 📌 All resources in one place
+
+<Steps>
+  ### In-Depth Guides
+    Detailed explanations of key data engineering concepts and tools.
+  ### Practice Questions
+    A wide range of questions to test and sharpen your skills.
+  ### Case Studies
+    Real-world scenarios to help you understand practical applications of data engineering principles.
+  ### Interview Tips
+    Strategies and tips to help you perform your best in interviews.
+</Steps>
+
+## 📚 Learn by Category
+
+### Concepts
+
+<Cards>
+  <Card arrow title="Fundamentals" href="/DataEngineeringFundamentals"></Card>
+  <Card arrow title="Lifecycle" href="/DataEngineeringLifecycle"></Card>
+  <Card arrow title="Architecture" href="/DataEngineeringArchitecture"></Card>
+  <Card arrow title="Data Modelling" href="/DataModelling"></Card>
+  <Card arrow title="Design Patterns" href="/DataEngineeringDesignPatterns"></Card>
+  <Card arrow title="Best Practices" href="/DataEngineeringBestPractices"></Card>
+</Cards>
+
+### Tools (Coming Soon)
+
+
+### Case Studies (Coming Soon)
+
+Thank you for visiting **thedataengineering.com**. Let's embark on this journey to data engineering excellence together!
