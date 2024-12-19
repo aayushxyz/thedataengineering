@@ -1,52 +1,230 @@
-import { Callout, Steps, Card, Cards } from 'nextra-theme-docs'
-import HeroImage from '../components/HeroImage'
-import Link from 'next/link'
+import { Cards, Steps } from 'nextra/components'
 
 <br/>
+<h1 style={{"textAlign": "center", "fontSize": 36, "fontWeight": "bold"}}>Learn, Build, Advance <br/>Your "Data Engineering" Career</h1>
 <br/>
-<h1 style={{"textAlign": "center", "fontSize": 40, "fontWeight": "bold"}}>Ace your next "Data Engineer" interview</h1>
+
+<h2 style={{"textAlign": "center", "fontSize": 20, "fontWeight": "normal"}}>From foundational concepts to advanced tools and techniques, <br/>we provide the resources, tools and guidance to help you thrive.</h2>
 <br/>
-<p style={{"textAlign": "center", "fontSize": 20, "fontWeight": "normal"}}>Complete end-to-end resources for mastering data engineering <br/>and prepare for your next Data Engineer interview.</p>
+<br/>
+
+
+<div style={{display: "flex",justifyContent: "center"}}>
+    <img src="data.svg" alt="Hero" width="471" height="300" />
+</div>
 <br/>
 <br/>
-<HeroImage />
 <br/>
-<Cards num={2}>
-  <Cards.Card arrow title="Start Preparation" href="/" />
-  <Cards.Card arrow title="Mock Interviews* (Coming Soon)" href="/" />
+
+<h2 style={{"textAlign": "center", "fontSize": 18, "fontWeight": "bold"}}>Start Your Journey</h2>
+
+<div style={{display: "flex",justifyContent: "center", marginTop: "7px"}}> 
+    <img src="down-arrow.png" alt="Down-Arrow" width="30" height="30" />
+</div>
+<div style={{display: "flex",justifyContent: "center", marginTop: "-15px"}}> 
+    <img src="down-arrow.png" alt="Down-Arrow" width="30" height="30" />
+</div>
+<br/>
+<br/>
+
+
+{/* <Cards num={2}>
+  <Cards.Card arrow title="Let's Get Started" href="/"></Cards.Card>
+  <Cards.Card arrow title="Join Free Newsletter" href="https://tally.so/embed/w5lOWM" target="_blank"/>
+</Cards>*/}
+<br/>
+<br/>
+<br/>
+
+## Data Engineering Fundamentals
+Understanding the core concepts, roles, and responsibilities in the data engineering landscape.
+
+<Cards num={3}>
+<Cards.Card arrow title="Fundamentals" href="/fundamentals"/>
 </Cards>
-<br/>
+
+- Learn about key data engineering functions and how they drive business value
+- Understand the various stakeholders you'll work with, from CDOs to Data Scientists
+- Explore the essential skills and tools needed to succeed as a data engineer
 
 
-## 📌 All resources in one place
+## Data Engineering Lifecycle
 
 <Steps>
-  ### In-Depth Guides
-    Detailed explanations of key data engineering concepts and tools.
-  ### Practice Questions
-    A wide range of questions to test and sharpen your skills.
-  ### Case Studies
-    Real-world scenarios to help you understand practical applications of data engineering principles.
-  ### Interview Tips
-    Strategies and tips to help you perform your best in interviews.
-</Steps>
 
-## 📚 Learn by Category
+### Data Generation
+The starting point of all data workflows, focusing on how data is created and sourced.
 
-### Concepts
-
-<Cards>
-  <Card arrow title="Fundamentals" href="/DataEngineeringFundamentals"></Card>
-  <Card arrow title="Lifecycle" href="/DataEngineeringLifecycle"></Card>
-  <Card arrow title="Architecture" href="/DataEngineeringArchitecture"></Card>
-  <Card arrow title="Data Modelling" href="/DataModelling"></Card>
-  <Card arrow title="Design Patterns" href="/DataEngineeringDesignPatterns"></Card>
-  <Card arrow title="Best Practices" href="/DataEngineeringBestPractices"></Card>
+<Cards num={3}>
+<Cards.Card arrow title="Generation" href="/generation"/>
 </Cards>
 
-### Tools (Coming Soon)
+- Understanding different data sources and their characteristics
+- Data quality considerations at the point of generation
+- Best practices for data validation and verification
 
+### Data Storage
+Implementing robust and scalable solutions to store data efficiently and securely.
 
-### Case Studies (Coming Soon)
+<Cards num={3}>
+<Cards.Card arrow title="Storage" href="/storage"/>
+</Cards>
+
+- Modern storage solutions from data lakes to warehouses
+- Storage formats and their impact on performance
+- Partitioning strategies and optimization techniques
+
+### Data Ingestion
+Building reliable pipelines to collect and import data from various sources.
+
+<Cards num={3}>
+<Cards.Card arrow title="Ingestion" href="/ingestion"/>
+</Cards>
+
+- Batch vs streaming ingestion patterns
+- Handling different data velocities and volumes
+- Implementing reliable and scalable ingestion pipelines
+
+### Data Transformation
+Converting raw data into valuable, analysis-ready formats.
+
+<Cards num={3}>
+<Cards.Card arrow title="Transformation" href="/transformation"/>
+</Cards>
+
+- ETL vs ELT approaches
+- Data cleaning and standardization practices
+- Performance optimization in data transformations
+
+### Data Serving
+Making processed data accessible to end-users and applications.
+
+<Cards num={3}>
+<Cards.Card arrow title="Serving" href="/serving"/>
+</Cards>
+
+- Data visualization and access patterns
+- Query optimization and performance tuning
+- Supporting different analytical workloads
+
+</Steps>
+
+## Data Engineering Key Principles
+
+<Steps>
+
+### Data Security
+Ensuring data protection and compliance throughout the data lifecycle.
+
+<Cards num={3}>
+<Cards.Card arrow title="Security" href="/security"/>
+</Cards>
+
+- Implementation of authentication and authorization
+- Data encryption and privacy protection
+- Security best practices and compliance frameworks
+
+### Data Management
+Overseeing data operations and governance effectively.
+
+<Cards num={3}>
+<Cards.Card arrow title="Data Management" href="/management"/>
+</Cards>
+
+- Data catalog management and metadata tracking
+- Data lifecycle management and retention policies
+- Quality monitoring and issue resolution
+
+### DataOps
+Bringing DevOps principles to data engineering workflows.
+
+<Cards num={3}>
+<Cards.Card arrow title="DataOps" href="/dataops"/>
+</Cards>
+
+- Continuous integration and deployment for data pipelines
+- Monitoring and logging best practices
+- Incident response and troubleshooting
+
+### Architecture
+Designing scalable and maintainable data systems.
+
+<Cards num={3}>
+<Cards.Card arrow title="Architecture" href="/architecture"/>
+</Cards>
+
+- Modern data architecture patterns
+- System integration considerations
+- Scalability and performance optimization
+
+### Orchestration
+Coordinating complex data workflows and dependencies.
+
+<Cards num={3}>
+<Cards.Card arrow title="Orchestration" href="/orchestration"/>
+</Cards>
+
+- Pipeline scheduling and monitoring
+- Error handling and recovery strategies
+- Resource optimization and cost management
+
+### Programming
+Essential software engineering skills for data engineers.
+
+<Cards num={3}>
+<Cards.Card arrow title="Programming" href="/programming"/>
+</Cards>
+
+- SQL and programming best practices
+- Version control and code management
+- Testing and documentation approaches
+
+</Steps>
+
+## Projects
+Hands-on implementations of data engineering solutions.
+
+<Cards num={3}>
+<Cards.Card arrow title="Projects" href="/projects"/>
+</Cards>
+
+- Building data lakes from scratch
+- Implementing data warehouses
+- Developing batch and streaming data solutions
+
+## Case Studies
+Real-world examples and implementations of data engineering solutions.
+
+<Cards num={3}>
+<Cards.Card arrow title="Case Studies" href="/casestudy"/>
+</Cards>
+
+- Success stories from various industries
+- Common challenges and their solutions
+- Lessons learned and best practices
+
+## External Resources
+Curated collection of learning materials and references.
+
+<Cards num={3}>
+<Cards.Card arrow title="External Resources" href="/resources"/>
+</Cards>
+
+- Recommended books and online courses
+- Technical blogs and articles
+- Community resources and forums
+
+## Stay Updated
+Join our community to receive the latest updates in data engineering.
+
+<Cards nums={3}>
+  <Cards.Card arrow title="Subcribe Here" href="https://tally.so/embed/w5lOWM" target="_blank"/> 
+</Cards>
+
+- Weekly newsletter with latest trends
+- Upcoming feature announcements
+- Community discussions and insights
+
+<br/>
 
 Thank you for visiting **thedataengineering.com**. Let's embark on this journey to data engineering excellence together!

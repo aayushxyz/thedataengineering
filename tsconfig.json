@@ -15,6 +15,6 @@
     "isolatedModules": true,
     "jsx": "preserve"
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/Hero.jsx", "components/Hero.mdx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/index.mdx"],
   "exclude": ["node_modules"]
 }

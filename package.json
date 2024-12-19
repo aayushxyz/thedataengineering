@@ -4,9 +4,8 @@
   "description": "Data Engineering Interview Preparation made easy.",
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
-    "start": "next start",
-    "export": "output: export"
+    "build": "next build",
+    "start": "next start"
   },
   "repository": {
     "type": "git",
@@ -20,9 +19,9 @@
   "homepage": "https://github.com/shuding/nextra-docs-template#readme",
   "dependencies": {
     "clsx": "^2.1.1",
-    "next": "^13.0.6",
-    "nextra": "^2.13.4",
-    "nextra-theme-docs": "^2.13.4",
+    "next": "^15.0.4",
+    "nextra": "^3.2.4",
+    "nextra-theme-docs": "^3.2.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

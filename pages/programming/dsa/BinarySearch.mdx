@@ -1,0 +1,286 @@
+# Understanding Binary Search DSA Problems: Patterns and Solutions
+
+## Introduction
+
+Binary Search is a fundamental algorithmic technique that efficiently finds a target value within a sorted collection by repeatedly dividing the search space in half. Understanding the various patterns and applications of Binary Search is crucial for solving complex problems efficiently. This blog post will explore different Binary Search patterns and provide practical solutions to help developers master this powerful technique.
+
+## Pattern 1: Classic Binary Search
+
+### Description
+The Classic Binary Search pattern involves searching for a specific target value in a sorted array by repeatedly dividing the search space in half.
+
+### Context and Importance
+This pattern forms the foundation for all Binary Search variations and is essential for solving problems with O(log n) time complexity instead of O(n).
+
+### How to Recognize
+- Input array is sorted
+- Need to find a specific value
+- Requirement for O(log n) time complexity
+
+### Approach
+1. Initialize left and right pointers to the array bounds
+2. Calculate middle point
+3. Compare middle element with target
+4. Adjust search space based on comparison
+5. Repeat until target is found or search space is exhausted
+
+### Example Problem
+Find a target value in a sorted array. Return the index if found, otherwise return -1.
+
+### Solution
+```python
+def binary_search(arr, target):
+    left, right = 0, len(arr) - 1
+    
+    while left <= right:
+        mid = left + (right - left) // 2
+        
+        if arr[mid] == target:
+            return mid
+        elif arr[mid] < target:
+            left = mid + 1
+        else:
+            right = mid - 1
+            
+    return -1
+```
+
+### Algorithm Explanation
+The algorithm maintains two pointers defining the search space. It calculates the middle point and compares it with the target value. Based on the comparison, it eliminates half of the search space and continues until the target is found or the search space is empty.
+
+## Pattern 2: Binary Search on Range
+
+### Description
+This pattern involves finding a value within a range of possible answers, often used when the answer space is continuous.
+
+### Context and Importance
+Useful for optimization problems where we need to minimize or maximize a value within a range.
+
+### How to Recognize
+- Problem involves finding a minimum or maximum value
+- Answer lies within a definite range
+- Can verify if a value is valid or not
+
+### Example Problem
+Find the square root of a number (rounded down to nearest integer).
+
+### Solution
+```python
+def sqrt(x):
+    if x < 2:
+        return x
+    
+    left, right = 1, x // 2
+    
+    while left <= right:
+        mid = left + (right - left) // 2
+        square = mid * mid
+        
+        if square == x:
+            return mid
+        elif square < x:
+            left = mid + 1
+        else:
+            right = mid - 1
+            
+    return right
+```
+
+### Algorithm Explanation
+The algorithm searches for the square root in the range [1, x//2]. It uses Binary Search to find the largest number whose square is less than or equal to x.
+
+## Pattern 3: Binary Search on Answer
+
+### Description
+This pattern involves using Binary Search to find an optimal value that satisfies certain conditions.
+
+### Context and Importance
+Useful when the answer space is ordered and we can verify if a value is valid.
+
+### How to Recognize
+- Can determine if a value is too small or too large
+- Answer space is ordered
+- Need to find optimal value satisfying conditions
+
+### Example Problem
+Find minimum capacity of ships to transport packages within D days.
+
+### Solution
+```python
+def shipWithinDays(weights, days):
+    def canShip(capacity):
+        days_needed = 1
+        current_load = 0
+        
+        for weight in weights:
+            if current_load + weight > capacity:
+                days_needed += 1
+                current_load = weight
+            else:
+                current_load += weight
+                
+        return days_needed <= days
+    
+    left = max(weights)
+    right = sum(weights)
+    
+    while left < right:
+        mid = left + (right - left) // 2
+        
+        if canShip(mid):
+            right = mid
+        else:
+            left = mid + 1
+            
+    return left
+```
+
+### Algorithm Explanation
+The algorithm searches for the minimum capacity needed by trying different capacities and checking if they allow shipping within the required days.
+
+## Pattern 4: Binary Search in Rotated Array
+
+### Description
+This pattern deals with searching in a sorted array that has been rotated around a pivot point.
+
+### Context and Importance
+Important for handling partially sorted arrays and understanding how to modify Binary Search for such cases.
+
+### How to Recognize
+- Array was originally sorted
+- Array has been rotated by some positions
+- Need to find a specific value
+
+### Example Problem
+Find a target value in a rotated sorted array.
+
+### Solution
+```python
+def search_rotated(nums, target):
+    left, right = 0, len(nums) - 1
+    
+    while left <= right:
+        mid = left + (right - left) // 2
+        
+        if nums[mid] == target:
+            return mid
+            
+        if nums[left] <= nums[mid]:
+            if nums[left] <= target < nums[mid]:
+                right = mid - 1
+            else:
+                left = mid + 1
+        else:
+            if nums[mid] < target <= nums[right]:
+                left = mid + 1
+            else:
+                right = mid - 1
+                
+    return -1
+```
+
+### Algorithm Explanation
+The algorithm identifies which half of the array is sorted and uses that information to determine which half could contain the target.
+
+## Pattern 5: Binary Search with Duplicates
+
+### Description
+This pattern handles situations where the input array contains duplicate elements.
+
+### Context and Importance
+Important for finding first or last occurrence of an element or handling non-unique elements.
+
+### How to Recognize
+- Array contains duplicate elements
+- Need to find first or last occurrence
+- Need to count occurrences
+
+### Example Problem
+Find the first and last position of a target value in a sorted array.
+
+### Solution
+```python
+def searchRange(nums, target):
+    def findBound(isFirst):
+        left, right = 0, len(nums) - 1
+        
+        while left <= right:
+            mid = left + (right - left) // 2
+            
+            if nums[mid] == target:
+                if isFirst:
+                    if mid == 0 or nums[mid-1] < target:
+                        return mid
+                    right = mid - 1
+                else:
+                    if mid == len(nums)-1 or nums[mid+1] > target:
+                        return mid
+                    left = mid + 1
+            elif nums[mid] < target:
+                left = mid + 1
+            else:
+                right = mid - 1
+                
+        return -1
+    
+    return [findBound(True), findBound(False)]
+```
+
+### Algorithm Explanation
+The algorithm performs two binary searches: one to find the first occurrence and another to find the last occurrence of the target value.
+
+## Pattern 6: Binary Search on Matrix
+
+### Description
+This pattern involves applying Binary Search on a 2D sorted matrix.
+
+### Context and Importance
+Useful for efficiently searching in sorted matrices and understanding how to adapt Binary Search to 2D spaces.
+
+### How to Recognize
+- Input is a sorted matrix
+- Matrix has row-wise and/or column-wise ordering
+- Need to find a specific value
+
+### Example Problem
+Search for a target value in a matrix where each row and column is sorted.
+
+### Solution
+```python
+def searchMatrix(matrix, target):
+    if not matrix or not matrix[0]:
+        return False
+        
+    rows, cols = len(matrix), len(matrix[0])
+    left, right = 0, rows * cols - 1
+    
+    while left <= right:
+        mid = left + (right - left) // 2
+        row, col = mid // cols, mid % cols
+        value = matrix[row][col]
+        
+        if value == target:
+            return True
+        elif value < target:
+            left = mid + 1
+        else:
+            right = mid - 1
+            
+    return False
+```
+
+### Algorithm Explanation
+The algorithm treats the 2D matrix as a flattened sorted array and performs Binary Search while mapping indices back to matrix positions.
+
+## Conclusion
+
+Binary Search is a powerful technique that goes beyond simple searching in sorted arrays. Understanding these patterns helps developers recognize when and how to apply Binary Search to solve complex problems efficiently. Practice with these patterns will improve your problem-solving skills and prepare you for technical interviews where Binary Search problems are common.
+
+Remember that the key to mastering Binary Search is understanding how to:
+- Identify the search space
+- Define clear conditions for narrowing the search
+- Handle edge cases
+- Avoid infinite loops
+- Adapt the basic pattern to specific problem requirements
+
+Happy coding!
