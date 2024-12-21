@@ -1,3 +1,1 @@
-export default {
-    "index": "Introduction"
-};
+export default {"index": "Introduction"}

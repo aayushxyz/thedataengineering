@@ -14,7 +14,6 @@ export default {
     orchestration: "Orchestration",
     programming: "Programming",
     projects: "Projects",
-    casestudy: "Case Studies",
     resources: "Resources",
     about: {title: "About",display: "visible"}    
 }; 

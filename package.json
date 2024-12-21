@@ -1,7 +1,7 @@
 {
   "name": "thedataengineering",
   "version": "0.0.1",
-  "description": "Data Engineering Interview Preparation made easy.",
+  "description": "Curating top resources for mastering data engineering.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -9,21 +9,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shuding/nextra-docs-template.git"
+    "url": "git+https://github.com/aayushxyz/thedataengineering"
   },
   "author": "Aayush Sharma",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/shuding/nextra-docs-template/issues"
+    "url": "https://github.com/aayushxyz/thedataengineering/issues"
   },
-  "homepage": "https://github.com/shuding/nextra-docs-template#readme",
+  "homepage": "https://github.com/aayushxyz/thedataengineering",
   "dependencies": {
     "clsx": "^2.1.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "next": "^15.0.4",
     "nextra": "^3.2.4",
-    "nextra-theme-docs": "^3.2.4",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "nextra-theme-docs": "^3.2.4"
   },
   "devDependencies": {
     "@types/node": "18.11.10",

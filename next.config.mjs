@@ -6,7 +6,8 @@ const withNextra = nextra({
   latex: true,
   search: {
     codeblocks: true
-  }
+  },
+  staticImage: true
 })
 
 export default withNextra({
