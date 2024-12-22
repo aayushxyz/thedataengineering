@@ -1,0 +1,48 @@
+/* Container to hold the two columns */
+.container {
+    display: flex;
+    flex-wrap: wrap; /* This will allow the columns to wrap on smaller screens */
+    padding: 20px;
+}
+
+/* Style for the image column */
+.image-column {
+    flex: 1 1 45%; /* Takes up 45% of space, but can shrink and grow */
+    margin-right: 20px;
+}
+
+.image-column img {
+    width: 100%;
+    height: auto;
+}
+
+/* Style for the text (bullet points) column */
+.text-column {
+    flex: 1 1 45%; /* Takes up 45% of space, but can shrink and grow */
+}
+
+.text-column ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.text-column li {
+    margin-bottom: 10px;
+}
+
+/* Media query for small screens */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack columns vertically */
+        align-items: center;
+    }
+
+    .image-column, .text-column {
+        flex: 1 1 100%; /* Make each column take full width */
+        margin-right: 0; /* Remove right margin */
+    }
+
+    .image-column img {
+        max-width: 100%; /* Ensure image is responsive */
+    }
+}

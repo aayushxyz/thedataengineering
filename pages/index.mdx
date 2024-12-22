@@ -31,28 +31,40 @@ import { Cards, Steps } from 'nextra/components'
 {/* <Cards num={2}>
   <Cards.Card arrow title="Let's Get Started" href="/"></Cards.Card>
   <Cards.Card arrow title="Join Free Newsletter" href="https://tally.so/embed/w5lOWM" target="_blank"/>
-</Cards>*/}
+</Cards>
 <br/>
 <br/>
 <br/>
+
+<div className="container">
+    <div className="image-column">
+        <img src="data.svg" alt="Placeholder Image" />
+    </div>
+    <div className="text-column">
+    <Cards num={3}>
+      <Cards.Card arrow title="Fundamentals" href="/fundamentals"></Cards.Card>
+    </Cards>
+    - Learn about key data engineering functions and how they drive business value
+    - Understand the various stakeholders you'll work with, from CDOs to Data Scientists
+    - Explore the essential skills and tools needed to succeed as a data engineer
+    </div>
+</div>
+*/}
 
 ## Data Engineering Fundamentals
 Understanding the core concepts, roles, and responsibilities in the data engineering landscape.
 
 <Cards num={3}>
-<Cards.Card arrow title="Fundamentals" href="/fundamentals">
-</Cards.Card>
+  <Cards.Card arrow title="Fundamentals" href="/fundamentals"></Cards.Card>
 </Cards>
-
 - Learn about key data engineering functions and how they drive business value
 - Understand the various stakeholders you'll work with, from CDOs to Data Scientists
 - Explore the essential skills and tools needed to succeed as a data engineer
 
 
-
 ## Data Engineering Lifecycle
 
-<Steps>
+<Steps> 
 
 ### Data Generation
 The starting point of all data workflows, focusing on how data is created and sourced.
@@ -112,8 +124,6 @@ Making processed data accessible to end-users and applications.
 </Steps>
 
 ## Data Engineering Key Principles
-
-<Steps>
 
 ### Data Security
 Ensuring data protection and compliance throughout the data lifecycle.
@@ -181,7 +191,6 @@ Essential software engineering skills for data engineers.
 - Version control and code management
 - Testing and documentation approaches
 
-</Steps>
 
 ## Projects
 Hands-on implementations of data engineering solutions.
