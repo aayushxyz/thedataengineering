@@ -14,6 +14,7 @@ export default {
     orchestration: "Orchestration",
     programming: "Programming",
     projects: "Projects",
-    resources: "Resources",
-    about: {title: "About",display: "visible"}    
+    external: "External Resources",
+    tools: "Tools",
+    about: {title: "About",display: "visible"}
 }; 

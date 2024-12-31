@@ -1,4 +1,7 @@
 .next
+.vscode
 node_modules
 out
 next-env.d.ts
+.DS_Store
+pages/.DS_Store

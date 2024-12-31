@@ -1,7 +1,5 @@
 import React from 'react'
-import { DocsThemeConfig } from 'nextra-theme-docs'
-import { ThemeSwitch } from 'nextra-theme-docs'
-import { Navbar } from 'nextra-theme-docs'
+import { DocsThemeConfig, ThemeSwitch, Navbar } from 'nextra-theme-docs'
 import { Cards } from 'nextra/components'
 
 function LiteThemeSwitch(props) {
@@ -42,8 +40,9 @@ function NavbarWithIgnoreOption({items}){
         title: "Resources",
         type: "menu",
         items: {
+            tools: {title: "Tools", href: "/tools"},
             projects: {title: "Projects",href: "/projects"},
-            resources: {title: "External Resources",href: "/resources"}
+            resources: {title: "External Resources",href: "/external"}
         }
     }
   }
