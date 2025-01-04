@@ -5,6 +5,5 @@ export default {
     encryption: "Encryption",
     protection: "Data Protection",
     database: "Database Security",
-    aws_tools: "AWS Tools Security",
     best_practices: "Best Practices"
 }

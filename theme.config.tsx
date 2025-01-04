@@ -42,7 +42,7 @@ function NavbarWithIgnoreOption({items}){
         items: {
             tools: {title: "Tools", href: "/tools"},
             projects: {title: "Projects",href: "/projects"},
-            resources: {title: "External Resources",href: "/external"}
+            resources: {title: "External Resources",href: "/resources/external"}
         }
     }
   }
@@ -56,6 +56,26 @@ function NavbarWithIgnoreOption({items}){
 }
 
 const config: DocsThemeConfig = {
+  // backgroundColor: {
+  //   dark: "25,25,25",
+  //   light: "245,245,245"
+  // },
+  // color: {
+  //   hue: {
+  //     dark: 200,
+  //     light: 210
+  //   },
+  //   lightness: {
+  //     dark: 60,
+  //     light: 50
+  //   },
+  //   saturation: 95
+  // },
+  banner: {
+    dismissible: true,
+    key: "banner-key",
+    content: "This website is currently in Beta."
+  },
   logo: (
     <>
       <img alt="TDE" height="32px" width="32px" src="logo.png" />

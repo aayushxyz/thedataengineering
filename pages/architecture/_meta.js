@@ -6,7 +6,6 @@ export default {
     mesh: "Data Mesh Architecture",
     lambda: "Lambda Architecture",
     kappa: "Kappa Architecture",
-    aws_native: "AWS-Native Architecture",
     event_driven: "Event Driven Architecture",
     patterns: "Architecture Patterns",
     performance: "Scalability & Performance",
