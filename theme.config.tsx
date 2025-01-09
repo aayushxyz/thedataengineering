@@ -1,6 +1,14 @@
-import React from 'react'
 import { DocsThemeConfig, ThemeSwitch, Navbar } from 'nextra-theme-docs'
-import { Cards } from 'nextra/components'
+
+function SideCard(){
+  return <a target="_blank" className="nextra-focus nextra-card _group _flex _flex-col _justify-start _overflow-hidden _rounded-lg _border _border-gray-200 _text-current _no-underline dark:_shadow-none hover:_shadow-gray-100 dark:hover:_shadow-none _shadow-gray-100 active:_shadow-sm active:_shadow-gray-200 _transition-all _duration-200 hover:_border-gray-300 _bg-gray-100 _shadow dark:_border-neutral-700 dark:_bg-neutral-800 dark:_text-gray-50 hover:_shadow-lg dark:hover:_border-neutral-500 dark:hover:_bg-neutral-700" 
+  href="https://tally.so/embed/w5lOWM">
+    <img src="newsletter.svg" alt="Down-Arrow" width="90%" height="100" style={{display: "flex", justifyContent: "center"}}/>
+    <span className="_flex _font-semibold _items-center _gap-2 _p-4 _text-gray-700 hover:_text-gray-900 after:_content-[&quot;→&quot;] after:_transition-transform after:_duration-75 after:group-hover:_translate-x-0.5 dark:_text-gray-300 dark:hover:_text-gray-100">
+      Subscribe to Newsletter
+    </span>
+  </a>
+}
 
 function LiteThemeSwitch(props) {
   return <ThemeSwitch {...props} lite={true} className={"max-md:_hidden"}/>;
@@ -104,15 +112,11 @@ const config: DocsThemeConfig = {
     placeholder: "Search..."
   },
   chat: {
-    link: "https://discord.gg/fNhyHvUn",
+    link: "https://discord.gg/QXKdyNSDQD",
   },
   gitTimestamp: null,
   toc: {
-    extraContent: (
-        <Cards.Card arrow title="Subscribe to Newsletter" href="https://tally.so/embed/w5lOWM">
-          <img src="newsletter.svg" alt="Down-Arrow" width="90%" height="100" style={{display: "flex",justifyContent: "center"}}/>
-        </Cards.Card>
-      )
+    extraContent: (<SideCard/>)
   },
   sidebar: {
     defaultMenuCollapseLevel: 1
