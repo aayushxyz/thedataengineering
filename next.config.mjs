@@ -1,6 +1,5 @@
 import bundleAnalyzer from '@next/bundle-analyzer';
 import nextra from 'nextra';
-import { setupDevPlatform } from '@cloudflare/next-on-pages/next-dev';
 
 const withBundleAnalyzer = bundleAnalyzer({
   enabled: process.env.ANALYZE === 'true',
@@ -13,10 +12,6 @@ const withNextra = nextra({
   }
 })
 
-if (process.env.NODE_ENV === 'development') {
-  await setupDevPlatform();
-}
-
 export default withNextra(
   withBundleAnalyzer({
     reactStrictMode: false,
@@ -27,4 +22,5 @@ export default withNextra(
     experimental: {
       optimizePackageImports: ['@mantine/core', '@mantine/hooks'],
     },
+    output: 'export'
   }));

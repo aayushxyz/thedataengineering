@@ -1,3 +1,5 @@
+'use client'
+
 import { IconMoon, IconSun } from '@tabler/icons-react';
 import cx from 'clsx';
 import { useTheme } from 'nextra-theme-docs';
