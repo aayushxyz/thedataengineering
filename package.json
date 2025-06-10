@@ -5,6 +5,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build && yarn build:pagefind",
+    "pages:build": "npx @cloudflare/next-on-pages",
+    "preview": "npm run pages:build && wrangler pages dev",
+    "deploy": "npm run pages:build && wrangler pages deploy",
     "build:pagefind": "pagefind --site .next/server/app --output-path public/_pagefind",
     "analyze": "ANALYZE=true next build",
     "start": "next start",
@@ -34,6 +37,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.26.10",
+    "@cloudflare/next-on-pages": "^1.13.12",
     "@eslint/js": "^9.23.0",
     "@ianvs/prettier-plugin-sort-imports": "^4.4.1",
     "@storybook/nextjs": "^8.6.9",
@@ -58,7 +62,8 @@
     "stylelint-config-standard-scss": "^14.0.0",
     "ts-jest": "^29.3.0",
     "typescript": "5.8.2",
-    "typescript-eslint": "^8.28.0"
+    "typescript-eslint": "^8.28.0",
+    "wrangler": "^4.19.1"
   },
   "packageManager": "yarn@4.7.0"
 }

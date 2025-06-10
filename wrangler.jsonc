@@ -1,0 +1,8 @@
+{
+    "name": "thedataengineering",
+    "compatibility_date": "2025-06-10",
+    "compatibility_flags": [
+      "nodejs_compat"
+    ],
+    "pages_build_output_dir": ".vercel/output/static"
+  }
