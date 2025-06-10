@@ -1,5 +1,3 @@
-'use client'
-
 import { IconMoon, IconSun } from '@tabler/icons-react';
 import cx from 'clsx';
 import { useTheme } from 'nextra-theme-docs';
@@ -25,8 +23,11 @@ export function ColorSchemeControl() {
       tooltip={`${computedColorScheme === 'dark' ? 'Light' : 'Dark'} mode`}
       aria-label="Toggle color scheme"
     >
-      <IconSun className={cx(classes.icon, classes.light)} stroke={1.5} />
-      <IconMoon className={cx(classes.icon, classes.dark)} stroke={1.5} />
+      {computedColorScheme === 'dark' ? (
+        <IconSun className={classes.icon} stroke={1.5} />
+      ) : (
+        <IconMoon className={classes.icon} stroke={1.5} />
+      )}
     </HeaderControl>
   );
 }

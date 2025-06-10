@@ -3,22 +3,20 @@
   height: 22px;
 }
 
-.dark {
-  @mixin dark {
-    display: none;
-  }
-
-  @mixin light {
-    display: block;
-  }
+/* When the .dark theme is active */
+.dark .light-icon {
+  display: none;
 }
 
-.light {
-  @mixin light {
-    display: none;
-  }
+.dark .dark-icon {
+  display: block;
+}
 
-  @mixin dark {
-    display: block;
-  }
+/* When the .light theme is active */
+.light .light-icon {
+  display: block;
+}
+
+.light .dark-icon {
+  display: none;
 }
