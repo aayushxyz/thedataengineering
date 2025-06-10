@@ -1,0 +1,18 @@
+## CREDITS
+
+This project uses the following open-source dependencies, which are licensed separately:
+
+- Original Template Creator: Giovambattista Fazioli – MIT License (https://github.com/gfazioli/next-app-nextra-template)
+- Next.js – MIT License (https://nextjs.org)
+- Nextra – MIT License (https://nextra.site)
+- Mantine – MIT License (https://mantine.dev)
+- Theme used is taken from MantineHub - MIT License (https://github.com/RubixCube-Innovations/mantine-theme-builder)
+- Icons used are taken from Tabler Icons - MIT Licesne (https://github.com/tabler/tabler-icons)
+- Logo image courtesy of pojok d - Flaticon (https://www.flaticon.com/free-icons/technology)
+
+
+Full dependency list and their licenses can be found in package.json and associated lock files.
+
+We are grateful to the open-source community for these incredible tools.
+
+Note: If you feel we used your work and forgot to attribute, please feel free to contact us.

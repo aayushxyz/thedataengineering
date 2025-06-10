@@ -1,0 +1,43 @@
+.title {
+    font-weight: 900;
+    line-height: 1.25;
+    text-align: center;
+    background: linear-gradient(80deg, var(--mantine-primary-color-filled), var(--mantine-primary-color-8));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(45deg, var(--mantine-primary-color-5), var(--mantine-primary-color-2));
+    margin: 20px auto;
+    border-radius: var(--mantine-radius-xl);
+}
+
+.themeIconBackground {
+    background: rgba(var(--mantine-primary-color-filled), 0.07);
+}
+
+[data-mantine-color-scheme="light"] .heroimg {
+    filter: brightness(90%);
+}
+
+[data-mantine-color-scheme="dark"] .heroimg {
+    filter: brightness(75%);
+}
+
+.highlight {
+    background: linear-gradient(90deg, var(--mantine-primary-color-5), var(--mantine-primary-color-8));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.fixedCard {
+    /* min-height: 200px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

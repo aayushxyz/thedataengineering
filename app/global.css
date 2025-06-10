@@ -1,0 +1,24 @@
+@layer theme;
+@import 'nextra-theme-docs/style.css';
+
+@layer theme {
+  :root {
+    --x-color-nextra-bg: var(--mantine-color-body);
+    scroll-padding-top: 120px;
+  }
+
+  .x\:text-sm {
+    font-size: var(--x-text-sm) !important;
+    line-height: var(--tw-leading, var(--x-text-sm--line-height)) !important;
+  }
+}
+
+.nextra-navbar >  nav > .nextra-scrollbar a:nth-of-type(n+2) {
+  display: none !important;
+}
+
+/* .nextra-mobile-nav > .nextra-scrollbar > li:nth-of-type(n+3),
+.nextra-mobile-nav > .nextra-scrollbar > li:nth-of-type(n+3) * {
+  display: none !important;
+}
+ */
