@@ -22,4 +22,5 @@ export default withNextra(
     experimental: {
       optimizePackageImports: ['@mantine/core', '@mantine/hooks'],
     },
+    output: 'export'
   }));
