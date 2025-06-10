@@ -87,7 +87,6 @@ web_modules/
 .next
 out
 _pagefind/
-public/_pagefind
 
 # Nuxt.js build / generate output
 .nuxt
@@ -128,6 +127,7 @@ dist
 .yarn/cache
 .yarn/unplugged
 .yarn/build-state.yml
+.yarn/install-state.gz
 .pnp.*
 
 .DS_Store
