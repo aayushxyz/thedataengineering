@@ -2,7 +2,7 @@
     font-weight: 900;
     line-height: 1.25;
     text-align: center;
-    background: linear-gradient(80deg, var(--mantine-primary-color-filled), var(--mantine-primary-color-8));
+    background: linear-gradient(90deg, var(--mantine-primary-color-filled), var(--mantine-primary-color-8));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }

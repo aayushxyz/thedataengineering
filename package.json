@@ -19,15 +19,19 @@
   },
   "dependencies": {
     "@mantine/core": "7.17.8",
-    "@mantine/hooks": "7.17.2",
+    "@mantine/hooks": "7.17.8",
     "@next/bundle-analyzer": "^15.2.4",
     "@tabler/icons-react": "^3.31.0",
+    "@tailwindcss/postcss": "^4.1.10",
     "clsx": "^2.1.1",
+    "esbuild": "^0.25.5",
     "next": "15.2.4",
     "nextra": "^4.2.16",
     "nextra-theme-docs": "^4.2.16",
+    "postcss": "^8.5.5",
     "react": "19.0.0",
-    "react-dom": "19.0.0"
+    "react-dom": "19.0.0",
+    "tailwindcss": "^4.1.10"
   },
   "devDependencies": {
     "@types/node": "^22.13.13",

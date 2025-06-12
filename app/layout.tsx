@@ -6,6 +6,9 @@ import { getPageMap } from 'nextra/page-map';
 import { ColorSchemeScript, mantineHtmlProps, MantineProvider} from '@mantine/core';
 import { MantineFooter, MantineNavBar } from '@/components';
 import { SocialLinksToc } from '@/components/SocialLinks/SocialLinksToc';
+import { shadcnCssVariableResolver } from "../cssVariableResolver";
+import { shadcnTheme } from "../theme";
+import '@mantine/core/styles.css';
 
 export const metadata = {
   title: {
@@ -55,8 +58,8 @@ export default async function RootLayout({ children }: { children: any }) {
         />
       </Head>
       <body>
-        {/* <MantineProvider theme={shadcnTheme} cssVariablesResolver={shadcnCssVariableResolver}> */}
-        <MantineProvider >
+        <MantineProvider theme={shadcnTheme} cssVariablesResolver={shadcnCssVariableResolver}>
+        {/* <MantineProvider withGlobalClasses={false} withCssVariables={false}> */}
           <Layout
             navbar={<MantineNavBar />}
             pageMap={pageMap}

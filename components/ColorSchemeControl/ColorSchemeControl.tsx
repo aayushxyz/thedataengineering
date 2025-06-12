@@ -23,11 +23,11 @@ export function ColorSchemeControl() {
       tooltip={`${computedColorScheme === 'dark' ? 'Light' : 'Dark'} mode`}
       aria-label="Toggle color scheme"
     >
-      {computedColorScheme === 'dark' ? (
+      {/* {computedColorScheme === 'light' ? ( */}
         <IconSun className={classes.icon} stroke={1.5} />
-      ) : (
-        <IconMoon className={classes.icon} stroke={1.5} />
-      )}
+       {/* ) : (
+         <IconMoon className={classes.icon} stroke={1.5} />
+       )} */}
     </HeaderControl>
   );
 }

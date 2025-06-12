@@ -84,12 +84,11 @@ export default function LandingPage() {
                   </Badge>
                 </Group>
                 <Group justify="center">
-                  <Title className={classes.title} order={1} fz={{ base: 36, sm: 42, md: 70 }}>
+                  <Title className={classes.title} order={1} fz={{ base: 36, sm: 42, md: 60 }} lh='1.2'>
                     Data Engineering Is Complex <br/>
                     <Text component="span" className={classes.highlight} inherit>
                     We Make It Simple For You<br/>
                     </Text>
-                     {/* Master Your Craft. <<< CHANGED */}
                   </Title>
                 </Group>
                 <Group justify="center">
@@ -103,7 +102,7 @@ export default function LandingPage() {
                     size="xl"
                     radius="xl"
                     leftSection={<IconRocket style={{ width: '1.5rem', height: '1.5rem' }} />}
-                    variant="filled"
+                    variant="light"
                     component="a"
                     href="/#courses"
                   >
@@ -273,11 +272,11 @@ export default function LandingPage() {
           <GridCol span={{ base: 12, md: 7 }}>
             <Group justify="center">
               <Box>
-                <Title className={classes.title} order={2} ta="center" size={40} fw={800}>
+                <Title className={classes.title} order={3} ta="center" size={40} fw={800} lh='1'>
                   {/* <<< CHANGED */}
                   Practical Data Engineering, Straight to Your Inbox
                 </Title>
-                <Text c="dimmed" ta="center" size="lg" maw={600} mx="auto" mt="md" mb='md' style={{textWrap: 'balance'}}>
+                <Text c="dimmed" ta="center" size="md" maw={600} mx="auto" mt="md" mb='md' style={{textWrap: 'balance'}}>
                   {/* <<< Kept original sub-headline, it's strong */}
                   Subscribe for weekly hands-on projects, tool mastery guides, and real-world
                   solutions from practicing professionals. No fluff, just practical knowledge you
